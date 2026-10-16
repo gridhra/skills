@@ -1,6 +1,9 @@
 #!/bin/bash
 # このリポジトリのskills/ とscripts/ を ~/.claudeにsymlinkで配る（冪等。既存の実ファイルは壊さずSKIP）。
-# hook（scripts/*.sh, *-hook.py）の登録はsettings.jsonに自分で書く。例はREADMEを参照。
+# hook（scripts/*.sh）の登録は ~/.claude/settings.json に自分で書く。例:
+#   "hooks": {"UserPromptSubmit": [{"hooks": [
+#     {"type": "command", "command": "~/.claude/scripts/low-context-reminder.sh", "timeout": 5},
+#     {"type": "command", "command": "~/.claude/scripts/subagent-review-reminder.sh", "timeout": 5}]}]}
 set -u
 SRC="$(cd "$(dirname "$0")" && pwd)"
 DST="${CLAUDE_HOME:-$HOME/.claude}"

@@ -1,4 +1,4 @@
-# claude-code-config
+# skills
 
 gridhraが作成したSkillのうち、公開できそうなものについて、不要な情報をサニタイズした上で公開しているRepositoryです。日本語話者が日本語でClaude Codeを用いる前提の構成であるため、Skillsも日本語でメンテナンスするようにしています。
 現状、安全に出せそうでありかつ公開価値を感じているのがライティング系のskillのlow-context-writingだけなので、それを置くだけの場になる可能性も高いです。
